@@ -1,0 +1,35 @@
+FUNCTION dot_product(V1 :ARRAY_OF n INTEGER, V2 : ARRAY_OF n INTEGER )INTEGER
+    ps,i : INTEGER
+BEGIN
+    FOR i FROM 0 TO n-1 STEP step1  DO
+        ps = ps + (V1[i]*V2[i])
+    END_FOR 
+    RETURN (ps)
+END 
+
+
+
+
+
+ALGORITHM Produit scalaire
+VAR
+    i,n : INTEGER
+    V1,V2 : ARRAY_OF INTEGER[n]
+BEGIN
+
+ write('ecrite la taille')
+    read ('n')
+FOR i FROM 0 TO n-1 STEP 1  DO
+    write("ecrire l élement du vecteur V1 a la position", i)
+    read (V1[i])
+END_FOR
+
+FOR i FROM 0 TO n-1 STEP 1  DO
+    write("ecrire l élement du vecteur V2 a la position", i)
+    read (V2[i])
+END_FOR
+END
+ read (ps)
+ IF (ps[V1]*ps[V2] = 0) THEN
+    write("les deux vecteurs sont orthogonaux")
+ END_IF
